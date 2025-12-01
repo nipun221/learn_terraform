@@ -103,8 +103,12 @@ count = 1
 
 ## 🔄 Sync Local Repo to GitHub
 
-Run:
+Make sync.sh executable first:
+```
+chmod +x sync.sh
+```
 
+Then run:
 ```bash
 ./sync.sh
 ```
@@ -125,6 +129,11 @@ The script:
 ---
 
 ## 💣 Destroy All Terraform Resources Safely
+
+Make destroy.sh executable first:
+```
+chmod +x destroy.sh
+```
 
 Run:
 
