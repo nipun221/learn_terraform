@@ -25,9 +25,9 @@ if ! git remote get-url origin >/dev/null 2>&1; then
   exit 1
 fi
 
-# 4. Pull latest changes with rebase
+# 4. Pull latest changes with pull
 echo "$INFO Pulling latest changes from origin/$CURRENT_BRANCH..."
-if ! git pull --rebase origin "$CURRENT_BRANCH"; then
+if ! git pull origin "$CURRENT_BRANCH"; then
   echo "$ERR git pull failed. Resolve conflicts and re-run ./sync.sh."
   exit 1
 fi
