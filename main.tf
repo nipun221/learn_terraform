@@ -49,3 +49,13 @@ resource "github_repository" "example" {
     visibility  = "public"
     topics      = ["terraform", "infrastructure-as-code", "aws"]
 }
+
+# Output the public IP address of the EC2 instance
+output "IP_Address_of_EC2_Instance" {
+    value = aws_instance.app_server.public_ip
+}
+
+# Output the S3 bucket name
+output "S3_Bucket_Name" {
+    value = aws_s3_bucket.app_bucket.bucket
+}
